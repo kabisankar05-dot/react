@@ -1,4 +1,5 @@
 /* ================= TOP BAR ================= */
+
 .top-bar {
   padding: 8px 0;
   font-size: 14px;
@@ -26,13 +27,15 @@
   color: #000 !important;
 }
 
-/* HR LINE */
+/* HR */
+
 .topbar-line {
   margin: 8px 0 0;
   border-top: 1px solid #ddd;
 }
 
 /* ================= LOGO ================= */
+
 .logo-wrapper {
   display: inline-flex;
   align-items: center;
@@ -52,6 +55,7 @@
 }
 
 /* ================= SEARCH ================= */
+
 .search-box {
   display: flex;
   align-items: center;
@@ -83,20 +87,40 @@
   color: #000;
 }
 
+/* SEARCH BUTTON */
+
 .search-btn {
   background: #00b207;
   color: white;
   border: none;
   height: 100%;
-  padding: 0 22px;
   font-weight: 500;
 }
+
+/* DESKTOP BUTTON */
+
+.desktop-search-btn {
+  padding: 0 22px;
+  display: block;
+}
+
+/* MOBILE BUTTON */
+
+.mobile-search-btn {
+  display: none;
+  width: 55px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HOVER */
 
 .search-btn:hover {
   background: #009e05;
 }
 
 /* ================= CUSTOMER SERVICE ================= */
+
 .customer-service {
   display: flex;
   align-items: center;
@@ -128,7 +152,9 @@
 }
 
 /* ================= MOBILE ================= */
+
 @media (max-width: 575px) {
+
   .topbar-flex {
     flex-direction: column;
     align-items: center;
@@ -145,105 +171,104 @@
     justify-content: center;
   }
 
-  .customer-service {
-    justify-content: center;
-  }
-
-  .cs-text {
-    text-align: center;
-  }
-
   .search-box {
     margin-top: 10px;
   }
+
+  /* HIDE TEXT BUTTON */
+
+  .desktop-search-btn {
+    display: none;
+  }
+
+  /* SHOW ICON BUTTON */
+
+  .mobile-search-btn {
+    display: flex;
+  }
+
+  /* HIDE CUSTOMER SERVICE */
+
+  .customer-service {
+    display: none;
+  }
+
 }
 
-/* =================  TABLET FIX ================= */
-  /* Tablet should behave like laptop */
-  @media (min-width: 576px) {
-    .topbar-flex {
-      flex-direction: row;
-      justify-content: space-between;
-      text-align: left;
-    }
+/* ================= TABLET FIX ================= */
+
+@media (min-width: 576px) {
+
+  .topbar-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
   }
 
-  /* ================= CONTAINER WIDTH ================= */
-  @media (min-width: 1400px) {
-    .container {
-      max-width: 1320px;
-    }
+}
+
+/* ================= CONTAINER WIDTH ================= */
+
+@media (min-width: 1400px) {
+
+  .container {
+    max-width: 1320px;
+  }
+  
+}
+
+@media (min-width: 1800px) {
+
+  .container {
+    max-width: 1500px;
   }
 
-  @media (min-width: 1800px) {
-    .container {
-      max-width: 1500px;
-    }
+}
+
+@media (min-width: 2200px) {
+
+  .container {
+    max-width: 1700px;
   }
 
-  @media (min-width: 2200px) {
-    .container {
-      max-width: 1700px;
-    }
+}
+
+/* ================= 4K SCALING ================= */
+
+@media (min-width: 1800px) {
+
+  .top-bar {
+    font-size: 16px;
+    padding: 10px;
   }
 
-
- /* =================  4K SCALING ================= */
-  @media (min-width: 1800px) {
-    .top-bar {
-      font-size: 16px;
-      padding: 10px;
-    }
-
-    .logo-text {
-      font-size: 28px;
-    }
-
-    .logo-icon {
-      width: 34px;
-      height: 34px;
-    }
-
-    .search-box {
-      height: 55px;
-    }
-
-    .search-left input {
-      font-size: 16px;
-    }
-
-    .search-btn {
-      font-size: 16px;
-      padding: 0 28px;
-    }
-
-    .phone {
-      font-size: 16px;
-    }
-
-    .icons {
-      font-size: 20px;
-    }
+  .search-box {
+    height: 55px;
   }
 
-  @media (min-width: 2200px) {
-    body {
-      zoom: 1.7;
-    }
-    
-    .logo-text {
-      font-size: 32px;
-    }
-
-    .search-box {
-      height: 60px;
-    }
-
-    .search-btn {
-      font-size: 18px;
-    }
-
-    .phone {
-      font-size: 18px;
-    }
+  .search-left input {
+    font-size: 16px;
   }
+
+  .search-btn {
+    font-size: 16px;
+    padding: 0 28px;
+  }
+
+}
+
+@media (min-width: 2200px) {
+
+  body {
+    zoom: 1.7;
+  }
+
+  .search-box {
+    height: 60px;
+  }
+
+  .search-btn {
+    font-size: 18px;
+  }
+
+}

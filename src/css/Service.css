@@ -1,0 +1,104 @@
+/* =========================
+   SERVICE SECTION
+========================= */
+
+.service-section{
+  background: #fff;
+  padding: 20px 0;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.service-card{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 25px 10px;
+  border-bottom: 3px solid transparent;
+  border-radius: 15px;
+  transition: 0.3s;
+  background: #fff;
+}
+
+/* ACTIVE CARD */
+
+/* .active-service{
+  border-bottom: 3px solid #00b207;
+} */
+
+/* =========================
+   ICON
+========================= */
+
+.service-icon{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #edf7ee;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+  color: #00b207;
+
+  flex-shrink: 0;
+}
+
+/* ACTIVE ICON */
+
+
+/* =========================
+   TEXT
+========================= */
+
+.service-text h5{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1a1a1a;
+}
+
+.service-text p{
+  font-size: 15px;
+  color: #808080;
+  margin: 0;
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.service-card:hover{
+  transform: translateY(-2px);
+    background-color: #00b207;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px){
+
+  .service-card{
+    padding: 18px 15px;
+  }
+
+  .service-icon{
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+  }
+
+  .service-text h5{
+    font-size: 16px;
+  }
+
+  .service-text p{
+    font-size: 13px;
+  }
+
+}
