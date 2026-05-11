@@ -6,6 +6,8 @@ import NavbarMenu from "./NavbarMenu";
 import CategorySidebar from "./Sidebar";
 import CarouselSection from "./Carousel";
 import ServiceSection from "./Service";
+import Banner from "./Banner";
+import Category from "./Category";
 
 const Home = () => {
 
@@ -58,8 +60,11 @@ const Home = () => {
         </div>
         <ServiceSection />
 
+        <Banner />
+        <Category />
       </Container>
     </>
+    
   );
 };
 
