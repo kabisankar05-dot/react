@@ -8,6 +8,7 @@ import CarouselSection from "./Carousel";
 import ServiceSection from "./Service";
 import Banner from "./Banner";
 import Category from "./Category";
+import FeaturedProducts from "./FeaturedProducts";
 
 const Home = () => {
 
@@ -62,6 +63,7 @@ const Home = () => {
 
         <Banner />
         <Category />
+        <FeaturedProducts />
       </Container>
     </>
     

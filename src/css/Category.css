@@ -119,6 +119,7 @@
   }
 
   .category-card{
+     height: 200px;
     padding: 20px 10px;
 
      display: flex;
@@ -127,10 +128,40 @@
   }
 
   .category-card h5{
-    font-size: 18px;
+    font-size: 16px;
   }
 
 }
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px){
+
+  .section-heading h2{
+    font-size: 34px;
+  }
+
+  .category-card{
+    height: 200px;
+
+    padding: 20px 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .category-card h5{
+    font-size: 16px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 576px){
 
@@ -138,17 +169,28 @@
     font-size: 28px;
   }
 
+  .category-card{
+    height: 180px;
+
+    padding: 15px 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .category-image{
-    height: 90px;
+    height: 80px;
   }
 
   .category-image img{
-    max-width: 70px;
-    max-height: 70px;
+    max-width: 65px;
+    max-height: 65px;
   }
 
   .category-card h5{
-    font-size: 15px;
+    font-size: 14px;
+    margin-top: 10px;
   }
 
 }

@@ -181,7 +181,15 @@
   .offer-content h2{
     font-size: 40px;
   }
+  /* 3RD BANNER FULL WIDTH */
 
+  .offer-section .col-lg-4:last-child{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  
 }
 
 @media (max-width: 576px){
@@ -194,6 +202,7 @@
   .offer-content h2{
     font-size: 30px;
   }
+  
 
   .timer{
     gap: 8px;
