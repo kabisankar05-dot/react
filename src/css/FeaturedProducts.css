@@ -614,6 +614,11 @@
     font-size: 28px;
   }
 
+  .shop-btn {
+    padding: 10px 26px !important;
+    font-size: 12px !important;
+  }
+
   /* .featured-row {
     flex-direction: column;
   }
@@ -750,7 +755,7 @@
   }
 
   .mini-card img {
-    width: 60px;
+    width: 100px;
     height: 60px;
   }
 
@@ -774,7 +779,7 @@
   /* MOBILE HOVER */
 
   .mini-icons {
-    right: 8px;
+    right: 25%;
   }
 
   .mini-icons button {

@@ -1,0 +1,103 @@
+/* =========================
+   VIDEO SECTION
+========================= */
+
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 420px;
+
+  background: url('../assets/video-banner.jpg');
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 50px 0;
+  padding: 0;
+}
+
+/* =========================
+   DARK GREEN OVERLAY
+========================= */
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 70, 20, 0.45);
+  z-index: 1;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.video-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: #fff;
+}
+
+.video-content h2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   PLAY BUTTON
+========================= */
+
+.play-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.play-btn:hover {
+  background: #00b207;
+  border-color: #00b207;
+  transform: scale(1.1);
+}
+
+/* =========================
+   MOBILE VIEW
+========================= */
+
+@media (max-width: 768px) {
+  .video-section {
+    height: 280px;
+    border-radius: 0;
+  }
+
+  .video-content h2 {
+    font-size: 28px;
+    padding: 0 15px;
+  }
+
+  .play-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+  }
+}

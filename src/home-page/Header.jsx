@@ -8,7 +8,7 @@ import {
 import { LuPhoneCall } from "react-icons/lu";
 
 import "./Header.css";
-import logo from "../assets/logo.svg";
+import logo from "../assets/Logo.svg";
 
 const Header = () => {
   return (

@@ -30,6 +30,10 @@ import product4 from "../assets/featured-product-5.jpg";
 import appleImg from "../assets/apple product.jpg";
 import eggplantImg from "../assets/eggplant-product.jpg";
 import potatoImg from "../assets/potatos product.jpg";
+import maltaImg from "../assets/indian malta.jpg";
+import capsicumImg from "../assets/red capsicum.jpg";
+import tomatoImg from "../assets/tomatos.jpg";
+import cauliflowerImg from "../assets/cauliflower.jpg";
 import yellowBannerImg from "../assets/banner-3.jpg";
 
 /* =========================
@@ -273,7 +277,7 @@ const FeaturedProducts = () => {
 
   <div className="mini-card mt-3">
 
-    <img src={appleImg} alt="" />
+    <img src={maltaImg} alt="" />
 
     <div className="mini-content">
 
@@ -313,7 +317,7 @@ const FeaturedProducts = () => {
 
   <div className="mini-card mt-3">
 
-    <img src={appleImg} alt="" />
+    <img src={product2} alt="" />
 
     <div className="mini-content">
 
@@ -396,7 +400,7 @@ const FeaturedProducts = () => {
 
   <div className="mini-card mt-3">
 
-    <img src={eggplantImg} alt="" />
+    <img src={capsicumImg} alt="" />
 
     <div className="mini-content">
 
@@ -434,7 +438,7 @@ const FeaturedProducts = () => {
 
   <div className="mini-card mt-3">
 
-    <img src={eggplantImg} alt="" />
+    <img src={tomatoImg} alt="" />
 
     <div className="mini-content">
 
@@ -515,7 +519,7 @@ const FeaturedProducts = () => {
 
   <div className="mini-card mt-3">
 
-    <img src={potatoImg} alt="" />
+    <img src={product4} alt="" />
 
     <div className="mini-content">
 
@@ -553,7 +557,7 @@ const FeaturedProducts = () => {
 
   <div className="mini-card mt-3">
 
-    <img src={potatoImg} alt="" />
+    <img src={cauliflowerImg} alt="" />
 
     <div className="mini-content">
 
