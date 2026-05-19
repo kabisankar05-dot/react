@@ -10,6 +10,7 @@ import Banner from "./Banner";
 import Category from "./Category";
 import FeaturedProducts from "./FeaturedProducts";
 import VideoBanner from "./VideoBanner";
+import TeamSection from "./TeamSection";
 
 const Home = () => {
 
@@ -66,6 +67,7 @@ const Home = () => {
         <Category />
         <FeaturedProducts />
         <VideoBanner />
+        <TeamSection />
       </Container>
     </>
     

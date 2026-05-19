@@ -1,0 +1,136 @@
+/* =========================
+   TEAM CARD
+========================= */
+
+.team-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.4s ease;
+  background: #fff;
+}
+
+.team-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   IMAGE WRAPPER
+========================= */
+
+.team-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* IMAGE */
+
+.team-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+/* IMAGE DARK OVERLAY */
+
+.team-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+/* HOVER EFFECT */
+
+.team-card:hover .team-overlay {
+  opacity: 1;
+}
+
+.team-card:hover .team-image {
+  transform: scale(1.05);
+}
+
+/* =========================
+   SOCIAL ICONS CENTER
+========================= */
+
+.social-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  opacity: 0;
+  transition: 0.4s ease;
+  z-index: 2;
+}
+
+/* SHOW ICONS ON HOVER */
+
+.team-card:hover .social-icons {
+  opacity: 1;
+}
+
+/* ICON STYLE */
+
+.social-icons a {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(5px);
+
+  color: #fff;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s ease;
+}
+
+/* ACTIVE GREEN ICON */
+
+.social-icons a:nth-child(2) {
+  
+  color: #fff;
+}
+
+/* ICON HOVER */
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  background: #00b207;
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.team-card .card-body {
+  padding: 18px;
+}
+
+.team-card h5 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+
+.team-card p {
+  font-size: 14px;
+  color: #808080;
+  margin: 0;
+}
