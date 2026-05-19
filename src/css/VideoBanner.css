@@ -81,6 +81,21 @@
 }
 
 /* =========================
+   MODAL
+========================= */
+
+.video-modal-body {
+  padding: 0;
+}
+
+.modal-content {
+  background: transparent;
+  border: none;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* =========================
    MOBILE VIEW
 ========================= */
 
