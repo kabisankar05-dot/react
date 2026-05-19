@@ -11,6 +11,8 @@ import Category from "./Category";
 import FeaturedProducts from "./FeaturedProducts";
 import VideoBanner from "./VideoBanner";
 import TeamSection from "./TeamSection";
+import TestimonialSection from "./TestimonialSection";
+import BrandLogoSection from "./BrandLogoSection";
 
 const Home = () => {
 
@@ -68,6 +70,8 @@ const Home = () => {
         <FeaturedProducts />
         <VideoBanner />
         <TeamSection />
+        <TestimonialSection />
+        <BrandLogoSection />
       </Container>
     </>
     

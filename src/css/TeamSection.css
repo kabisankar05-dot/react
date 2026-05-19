@@ -1,3 +1,9 @@
+
+
+.team-section {
+  padding: 60px 0;
+}
+
 /* =========================
    TEAM CARD
 ========================= */
@@ -133,4 +139,125 @@
   font-size: 14px;
   color: #808080;
   margin: 0;
+}
+
+/* =========================
+TABLET VIEW
+========================= */
+
+@media (max-width: 992px) {
+
+  .team-section {
+    padding: 50px 0;
+  }
+
+  .team-image {
+    height: 240px;
+  }
+
+  .team-card h5 {
+    font-size: 20px;
+  }
+
+  .team-card p {
+    font-size: 13px;
+  }
+
+}
+
+/* =========================
+MOBILE VIEW
+========================= */
+
+@media (max-width: 768px) {
+
+  .team-section {
+    padding: 40px 0;
+    
+  }
+
+  .team-image {
+    height: 220px;
+  }
+
+  .team-card {
+    margin-bottom: 10px;
+  }
+  
+  .card-body {
+    padding: 15px ;
+    text-align: center;
+  }
+
+  .team-card h5 {
+    font-size: 18px;
+  }
+
+  .team-card p {
+    font-size: 13px;
+  }
+
+  .social-icons {
+    gap: 8px;
+  }
+
+  .social-icons a {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+}
+
+/* =========================
+SMALL MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+  .team-section {
+    padding: 35px 15px;
+  }
+
+  .team-image {
+    height: 260px;
+  }
+
+  .team-card {
+    margin-bottom: 20px;
+  }
+
+  .team-card h5 {
+    font-size: 17px;
+  }
+
+  .team-card p {
+    font-size: 12px;
+  }
+
+  .social-icons a {
+
+    width: 32px;
+    height: 32px;
+
+    font-size: 13px;
+
+  }
+
+}
+
+/* =========================
+EXTRA SMALL MOBILE
+========================= */
+
+@media (max-width: 375px) {
+
+  .team-image {
+    height: 220px;
+  }
+
+  .team-card h5 {
+    font-size: 16px;
+  }
+
 }
