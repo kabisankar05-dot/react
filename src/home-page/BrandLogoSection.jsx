@@ -4,13 +4,20 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../css/BrandLogoSection.css";
 
+import stepsLogo from "../assets/Vector.png";
+import mangoLogo from "../assets/mango-1.png";
+import foodLogo from "../assets/Group (1).png";
+import foodNetworkLogo from "../assets/food.png";
+import bookOffLogo from "../assets/bookoff-corporation-logo.png";
+import gSeriesLogo from "../assets/Group.png";
+
 const brands = [
-  "steps",
-  "MANGO",
-  "Food Network",
-  "FOOD",
-  "BOOK OFF",
-  "G Series",
+  { name: "", logo: stepsLogo },
+  { name: "", logo: mangoLogo },
+  { name: "", logo: foodNetworkLogo },
+  { name: "", logo: foodLogo },
+  { name: "", logo: bookOffLogo },
+  { name: "", logo: gSeriesLogo }
 ];
 
 const BrandLogoSection = () => {
@@ -30,21 +37,25 @@ const BrandLogoSection = () => {
                 key={index}
                 className="brand-col"
               >
-
                 <div className="brand-item">
+
+                  <img
+                    src={brand.logo}
+                    alt={brand.name}
+                    className="brand-logo"
+                  />
 
                   <h4
                     className={`brand-name ${
-                      brand === "steps"
+                      brand.name === "steps"
                         ? "active-brand"
                         : ""
                     }`}
                   >
-                    {brand}
+                    {brand.name}
                   </h4>
 
                 </div>
-
               </Col>
             ))}
 

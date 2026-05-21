@@ -13,6 +13,7 @@ import VideoBanner from "./VideoBanner";
 import TeamSection from "./TeamSection";
 import TestimonialSection from "./TestimonialSection";
 import BrandLogoSection from "./BrandLogoSection";
+import FooterSection from "./FooterSection";
 
 const Home = () => {
 
@@ -73,6 +74,7 @@ const Home = () => {
         <TestimonialSection />
         <BrandLogoSection />
       </Container>
+      <FooterSection />
     </>
     
   );
