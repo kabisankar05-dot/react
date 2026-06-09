@@ -31,7 +31,7 @@ import appleImg from "../assets/apple product.jpg";
 import eggplantImg from "../assets/eggplant-product.jpg";
 import potatoImg from "../assets/potatos product.jpg";
 import maltaImg from "../assets/indian malta.jpg";
-import capsicumImg from "../assets/red capsicum.jpg";
+import capsicumImg from "../assets/ladies finger.jpg";
 import tomatoImg from "../assets/tomatos.jpg";
 import cauliflowerImg from "../assets/cauliflower.jpg";
 import yellowBannerImg from "../assets/banner-3.jpg";

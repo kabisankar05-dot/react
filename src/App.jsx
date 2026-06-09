@@ -8,7 +8,7 @@ import CategorySidebar from "./home-page/Sidebar";
 import CarouselSection from "./home-page/Carousel";
 
 import Home from "./home-page/Home";
-// import Vegetables from "./pages/Vegetables";
+import Shop from "./shop-page/Shop";
 
 function App() {
   const [showCategory, setShowCategory] = useState(true);
@@ -26,7 +26,8 @@ function App() {
         />
 
         <Routes>
-          {/* Home Page */}
+
+          {/* HOME PAGE */}
           <Route
             path="/"
             element={
@@ -54,8 +55,9 @@ function App() {
             }
           />
 
-          {/* Vegetables Page */}
-          {/* <Route path="/vegetables" element={<Vegetables />} /> */}
+          {/* SHOP PAGE */}
+          <Route path="/shop" element={<Shop />} />
+
         </Routes>
       </Container>
     </>

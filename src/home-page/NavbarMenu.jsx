@@ -1,13 +1,10 @@
 import React from "react";
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import { FaHeart, FaShoppingCart, FaUser } from "react-icons/fa";
 
 import "../css/NavbarMenu.css";
-
-const NAV_LINKS = ["Home", "Shop", "Pages", "Blog", "About Us", "Contact Us"];
-
-const HAS_DROPDOWN = ["Home", "Shop", "Pages", "Blog"];
 
 const CATEGORIES = [
   "Vegetables",
@@ -21,7 +18,6 @@ const CATEGORIES = [
 const NavbarMenu = ({ toggleCategory, showCategory }) => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" className="navbar-custom">
-
       <Container className="custom-container">
 
         {/* ALL CATEGORY BUTTON */}
@@ -42,16 +38,23 @@ const NavbarMenu = ({ toggleCategory, showCategory }) => {
         {/* DESKTOP MENU */}
         <Navbar.Collapse className="justify-content-between">
           <Nav className="mx-auto">
-            {NAV_LINKS.map((link) =>
-              HAS_DROPDOWN.includes(link) ? (
-                <NavDropdown key={link} title={link} id={`${link}-dropdown`}>
-                  <NavDropdown.Item>{link}</NavDropdown.Item>
-                  <NavDropdown.Item>{link}</NavDropdown.Item>
-                </NavDropdown>
-              ) : (
-                <Nav.Link key={link}>{link}</Nav.Link>
-              )
-            )}
+
+            <Nav.Link as={Link} to="/">
+              Home
+            </Nav.Link>
+
+            <Nav.Link as={Link} to="/shop">
+              Shop
+            </Nav.Link>
+
+            <Nav.Link>Pages</Nav.Link>
+
+            <Nav.Link>Blog</Nav.Link>
+
+            <Nav.Link>About Us</Nav.Link>
+
+            <Nav.Link>Contact Us</Nav.Link>
+
           </Nav>
 
           <div className="icons">
@@ -66,7 +69,7 @@ const NavbarMenu = ({ toggleCategory, showCategory }) => {
 
       </Container>
 
-      {/*  MOBILE ONLY CATEGORY MENU */}
+      {/* MOBILE CATEGORY MENU */}
       {showCategory && (
         <div className="mobile-category-menu">
           {CATEGORIES.map((item, index) => (
@@ -76,7 +79,6 @@ const NavbarMenu = ({ toggleCategory, showCategory }) => {
           ))}
         </div>
       )}
-
     </Navbar>
   );
 };
