@@ -1,0 +1,305 @@
+/* ================= TOP BAR ================= */
+
+.top-bar {
+  background: #333;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 0;
+}
+
+.topbar-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown-btn {
+  color: #fff !important;
+  text-decoration: none !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  font-size: 12px;
+}
+
+.auth-link {
+  color: #999;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  color: #fff;
+}
+
+.divider {
+  color: #666;
+}
+
+.topbar-line {
+  margin: 8px 0 0;
+  border-color: rgba(255,255,255,0.1);
+}
+
+/* ================= LOGO ================= */
+
+.logo-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-wrapper:hover .logo-img {
+  transform: scale(1.05);
+}
+
+/* ================= SEARCH ================= */
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 45px;
+  background: #fff;
+}
+
+.search-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 0 12px;
+}
+
+.search-icon {
+  color: #999;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.search-left input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #000;
+}
+
+.search-btn {
+  background: #00b207;
+  color: #fff;
+  border: none;
+  height: 100%;
+  padding: 0 24px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  background: #009e05;
+}
+
+.desktop-search-btn {
+  display: block;
+}
+
+.mobile-search-btn {
+  display: none;
+  width: 55px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= WISHLIST & CART ================= */
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+.wishlist-icon {
+  font-size: 22px;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.wishlist-icon:hover {
+  color: #00b207;
+}
+
+.icon-divider {
+  width: 1px;
+  height: 28px;
+  background: #e5e5e5;
+}
+
+.cart-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.cart-icon {
+  font-size: 22px;
+  color: #1a1a1a;
+}
+
+.cart-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.cart-label {
+  font-size: 11px;
+  color: #808080;
+}
+
+.cart-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.topbar-line {
+  margin: 8px 0 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 575px) {
+
+  .topbar-flex {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .location-text {
+    justify-content: center;
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+
+  .search-box {
+    margin-top: 10px;
+  }
+
+  .desktop-search-btn {
+    display: none;
+  }
+
+  .mobile-search-btn {
+    display: flex;
+  }
+
+  .header-icons {
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .cart-info {
+    text-align: left;
+  }
+}
+
+/* ================= TABLET ================= */
+
+@media (min-width: 576px) {
+
+  .topbar-flex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* ================= LARGE CONTAINERS ================= */
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .container {
+    max-width: 1500px;
+  }
+}
+
+@media (min-width: 2200px) {
+  .container {
+    max-width: 1700px;
+  }
+}
+
+/* ================= 4K SCALE ================= */
+
+@media (min-width: 1800px) {
+
+  .top-bar {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .search-box {
+    height: 55px;
+  }
+
+  .search-left input {
+    font-size: 16px;
+  }
+
+  .search-btn {
+    font-size: 16px;
+  }
+
+  .wishlist-icon,
+  .cart-icon {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 2200px) {
+
+  body {
+    zoom: 1.7;
+  }
+
+  .search-box {
+    height: 60px;
+  }
+
+  .search-btn {
+    font-size: 18px;
+  }
+}

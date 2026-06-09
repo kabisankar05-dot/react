@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-
+import Header from "./Header";
+import Navbars from "./Navbar";
 import FilterSidebar from "./FilterSidebar";
 import ProductGrid from "./ProductGrid";
 import products from "./products";
+import ShopBanner from "./ShopBanner";
+import FooterSection from "../home-page/FooterSection";
 import "../shop-page/ShopPage.css";
 
 function Shop() {
@@ -22,11 +25,15 @@ function Shop() {
   });
 
   return (
-    <Container className="py-4">
-      <Row>
-        <Col lg={3}>
-          <FilterSidebar
-            category={category}
+    <>
+      <Header />
+      <Navbars />
+      <ShopBanner />
+      <Container className="py-4">
+        <Row>
+          <Col lg={3}>
+            <FilterSidebar
+              category={category}
             setCategory={setCategory}
             maxPrice={maxPrice}
             setMaxPrice={setMaxPrice}
@@ -44,6 +51,8 @@ function Shop() {
         </Col>
       </Row>
     </Container>
+      <FooterSection />
+    </>
   );
 }
 

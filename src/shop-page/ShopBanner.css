@@ -1,0 +1,55 @@
+.shop-banner {
+  background-image: url("../assets/breadcumb.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  
+}
+
+.shop-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.breadcrumb-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+.home-icon {
+  color: #b3b3b3;
+}
+
+.arrow-icon {
+  font-size: 10px;
+  color: #777;
+}
+
+.bread-link {
+  color: #b3b3b3;
+}
+
+.active-link {
+  color: #00b207;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .shop-banner {
+    height: 90px;
+  }
+
+  .breadcrumb-content {
+    font-size: 12px;
+  }
+}
