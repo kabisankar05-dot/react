@@ -49,11 +49,11 @@ const NavbarMenu = ({ toggleCategory, showCategory }) => {
 
             <Nav.Link>Pages</Nav.Link>
 
-            <Nav.Link>Blog</Nav.Link>
+            <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
 
-            <Nav.Link>About Us</Nav.Link>
+            <Nav.Link as={Link} to="/about">About Us</Nav.Link>
 
-            <Nav.Link>Contact Us</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
 
           </Nav>
 

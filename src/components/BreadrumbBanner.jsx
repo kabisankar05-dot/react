@@ -1,32 +1,36 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { FaHome, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import "./ShopBanner.css";
+import { FaHome, FaChevronRight } from "react-icons/fa";
+import "./BreadcrumbBanner.css";
 
-const ShopBanner = () => {
+const BreadcrumbBanner = ({
+  parent,
+  parentLink,
+  title,
+}) => {
   return (
     <div className="shop-banner">
       <Container>
         <div className="breadcrumb-content">
 
-          {/* Home */}
           <Link to="/" className="home-link">
             <FaHome className="home-icon" />
           </Link>
 
           <FaChevronRight className="arrow-icon" />
 
-          {/* Categories */}
-          <Link to="/shop" className="bread-link">
-            Categories
+          <Link
+            to={parentLink}
+            className="bread-link"
+          >
+            {parent}
           </Link>
 
           <FaChevronRight className="arrow-icon" />
 
-          {/* Current Page */}
           <span className="active-link">
-            Vegetables
+            {title}
           </span>
 
         </div>
@@ -35,4 +39,4 @@ const ShopBanner = () => {
   );
 };
 
-export default ShopBanner;
+export default BreadcrumbBanner;
