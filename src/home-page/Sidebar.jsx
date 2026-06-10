@@ -1,5 +1,7 @@
 import React from "react";
 import { ListGroup } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+
 import {
   FaAppleAlt,
   FaLeaf,
@@ -11,11 +13,12 @@ import {
   FaCheese,
   FaUtensils,
 } from "react-icons/fa";
+
 import "../css/Carousel.css";
 
 const categories = [
   { name: "Fresh Fruit", icon: <FaAppleAlt /> },
-  { name: "Vegetables", icon: <FaLeaf />,  },
+  { name: "Vegetables", icon: <FaLeaf /> },
   { name: "River Fish", icon: <FaFish /> },
   { name: "Chicken & Meat", icon: <FaDrumstickBite /> },
   { name: "Drink & Water", icon: <FaCoffee /> },
@@ -26,15 +29,21 @@ const categories = [
 ];
 
 const CategorySidebar = () => {
+  const navigate = useNavigate();
+
+  const handleCategoryClick = () => {
+    navigate("/shop");
+  };
+
   return (
     <div className="category-wrapper">
       <ListGroup variant="flush">
         {categories.map((item, index) => (
           <ListGroup.Item
             key={index}
-            className={`category-item d-flex align-items-center gap-2 ${
-              item.active ? "active-item" : ""
-            }`}
+            className="category-item d-flex align-items-center gap-2"
+            onClick={handleCategoryClick}
+            style={{ cursor: "pointer" }}
           >
             {item.icon}
             {item.name}
@@ -42,7 +51,13 @@ const CategorySidebar = () => {
         ))}
       </ListGroup>
 
-      <div className="view-all">+ View all Category</div>
+      <div
+        className="view-all"
+        onClick={() => navigate("/shop")}
+        style={{ cursor: "pointer" }}
+      >
+        + View all Category
+      </div>
     </div>
   );
 };

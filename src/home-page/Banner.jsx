@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 import "../css/Banner.css";
 
 const Banner = () => {
+  const navigate = useNavigate();
 
   // TIMER STATE
 
@@ -125,7 +127,8 @@ const Banner = () => {
 
                 </div>
 
-                <Button className="shop-btn">
+                <Button className="shop-btn"
+                onClick={() => navigate("/shop")}>
                   Shop Now →
                 </Button>
 
@@ -155,7 +158,8 @@ const Banner = () => {
                   Started at <span>$79.99</span>
                 </p>
 
-                <Button className="shop-btn">
+                <Button className="shop-btn"
+                onClick={() => navigate("/shop")}>
                   Shop Now →
                 </Button>
 
@@ -185,7 +189,8 @@ const Banner = () => {
                   Up to <span>64% OFF</span>
                 </p>
 
-                <Button className="shop-btn">
+                <Button className="shop-btn"
+                onClick={() => navigate("/shop")}>
                   Shop Now →
                 </Button>
 

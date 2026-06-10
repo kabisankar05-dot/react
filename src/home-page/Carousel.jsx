@@ -1,5 +1,6 @@
 import React from "react";
-import { Carousel, Button, Container, Row, Col } from "react-bootstrap";
+import { Carousel, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 import {
   FaShippingFast,
@@ -15,6 +16,7 @@ import bg3 from "../assets/image-3.jpg";
 import "../css/Carousel.css";
 
 const CarouselSection = () => {
+  const navigate = useNavigate();
 
   const services = [
     {
@@ -41,11 +43,9 @@ const CarouselSection = () => {
 
   return (
     <>
-    
       {/* ================= HERO SECTION ================= */}
 
       <div className="hero-wrapper">
-
         <Carousel
           fade
           indicators={false}
@@ -53,7 +53,6 @@ const CarouselSection = () => {
           interval={3000}
           pause={false}
         >
-
           {/* SLIDE 1 */}
           <Carousel.Item>
             <div
@@ -62,8 +61,15 @@ const CarouselSection = () => {
             >
               <div className="hero-text">
                 <h1>Fresh & Healthy Organic Food</h1>
+
                 <p>SALE UP TO 48% OFF</p>
-                <Button className="button">Shop now →</Button>
+
+                <Button
+                  className="button"
+                  onClick={() => navigate("/shop")}
+                >
+                  Shop now →
+                </Button>
               </div>
             </div>
           </Carousel.Item>
@@ -86,7 +92,10 @@ const CarouselSection = () => {
                   </span>
                 </p>
 
-                <Button className="button">
+                <Button
+                  className="button"
+                  onClick={() => navigate("/shop")}
+                >
                   Shop now →
                 </Button>
               </div>
@@ -111,19 +120,19 @@ const CarouselSection = () => {
                   </span>
                 </p>
 
-                <Button className="button">
+                <Button
+                  className="button"
+                  onClick={() => navigate("/shop")}
+                >
                   Shop now →
                 </Button>
               </div>
             </div>
           </Carousel.Item>
-
         </Carousel>
       </div>
-
-      
     </>
   );
 };
 
-export default CarouselSection;
+export default CarouselSection; 

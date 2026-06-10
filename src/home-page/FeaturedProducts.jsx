@@ -13,6 +13,7 @@ import {
   FaEye,
   FaStar,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 import "../css/FeaturedProducts.css";
 
@@ -68,6 +69,8 @@ const products = [
 ];
 
 const FeaturedProducts = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="featured-section">
 
@@ -108,7 +111,7 @@ const FeaturedProducts = () => {
         75% <span>off</span>
       </h2>
 
-      <Button className="shop-btn">
+      <Button className="shop-btn" onClick={() => navigate("/shop")}>
         Shop Now →
       </Button>
 
@@ -616,7 +619,8 @@ const FeaturedProducts = () => {
       Every Order
     </h2>
 
-    <Button className="shop-btn">
+    <Button className="shop-btn"
+    onClick={() => navigate("/shop")}>
       Shop Now →
     </Button>
 
