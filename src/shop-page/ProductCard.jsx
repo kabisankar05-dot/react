@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+
 import {
   FaHeart,
   FaEye,
@@ -7,7 +8,10 @@ import {
   FaStar,
 } from "react-icons/fa";
 
-function ProductCard({ product }) {
+function ProductCard({
+  product,
+  onQuickView,
+}) {
   return (
     <Card className="product-card">
       <div className="product-img-wrapper">
@@ -17,7 +21,11 @@ function ProductCard({ product }) {
             <FaHeart />
           </button>
 
-          <button>
+          <button
+            onClick={() =>
+              onQuickView(product)
+            }
+          >
             <FaEye />
           </button>
         </div>
@@ -37,19 +45,15 @@ function ProductCard({ product }) {
         </p>
 
         <h5 className="product-price">
-          {product.price}
-
-          <span className="old-price ms-2">
-            {product.oldPrice}
-          </span>
+          ${product.price}
         </h5>
 
         <div className="rating">
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaStar className="gray-star" />
+          {[...Array(product.rating)].map(
+            (_, index) => (
+              <FaStar key={index} />
+            )
+          )}
         </div>
 
         <button className="cart-btn">
