@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 import {
   FaHeart,
@@ -12,22 +13,37 @@ function ProductCard({
   product,
   onQuickView,
 }) {
+  const navigate = useNavigate();
+
   return (
-    <Card className="product-card">
+    <Card
+      className="product-card"
+      onClick={() =>
+        navigate(`/product/${product.id}`)
+      }
+      style={{ cursor: "pointer" }}
+    >
       <div className="product-img-wrapper">
 
         <div className="hover-icons">
-          <button>
+
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          >
             <FaHeart />
           </button>
 
           <button
-            onClick={() =>
-              onQuickView(product)
-            }
+            onClick={(e) => {
+              e.stopPropagation();
+              onQuickView(product);
+            }}
           >
             <FaEye />
           </button>
+
         </div>
 
         <div
@@ -39,7 +55,6 @@ function ProductCard({
       </div>
 
       <Card.Body>
-
         <p className="product-name">
           {product.name}
         </p>
@@ -56,10 +71,12 @@ function ProductCard({
           )}
         </div>
 
-        <button className="cart-btn">
+        <button
+          className="cart-btn"
+          onClick={(e) => e.stopPropagation()}
+        >
           <FaShoppingCart />
         </button>
-
       </Card.Body>
     </Card>
   );

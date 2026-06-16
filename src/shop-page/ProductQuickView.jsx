@@ -18,7 +18,7 @@ import {
   FaHeart,
   FaMinus,
   FaPlus,
-  FaShoppingBag,
+   FaShoppingCart,
 } from "react-icons/fa";
 
 import "./ProductQuickView.css";
@@ -201,7 +201,7 @@ function ProductQuickView({
                   }
                 >
                   Add To Cart
-                  <FaShoppingBag className="ms-2" />
+                  <FaShoppingCart className="ms-2" />
                 </Button>
 
                 <button
