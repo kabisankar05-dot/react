@@ -17,7 +17,7 @@ import {
 import Header from "./Header";
 import Navbars from "./Navbar";
 import ShopBanner from "./ShopBanner";
-import products from "./products";
+import products from "./Products";
 
 import "./ProductQuickView.css"; // இதே CSS reuse பண்ணலாம்
 

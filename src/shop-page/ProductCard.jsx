@@ -19,7 +19,7 @@ function ProductCard({
     <Card
       className="product-card"
       onClick={() =>
-        navigate(`/product/${product.id}`)
+        navigate(`/Product/${product.id}`)
       }
       style={{ cursor: "pointer" }}
     >
