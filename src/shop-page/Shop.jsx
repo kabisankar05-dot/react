@@ -7,7 +7,7 @@ import FilterSidebar from "./FilterSidebar";
 import ProductGrid from "./ProductGrid";
 import ProductQuickView from "./ProductQuickView";
 
-import products from "./Products";
+import products from "./products";
 
 import ShopBanner from "./ShopBanner";
 import FooterSection from "../home-page/FooterSection";
