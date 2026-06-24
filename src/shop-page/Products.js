@@ -138,4 +138,4 @@ const products = [
 
 ];
 
-export default Products;
+export default products;
