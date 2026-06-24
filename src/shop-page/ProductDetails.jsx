@@ -24,7 +24,7 @@ import "./ProductQuickView.css"; // இதே CSS reuse பண்ணலாம்
 function ProductDetails() {
   const { id } = useParams();
 
-  const product = products.find(
+  const product = Products.find(
     (item) => item.id === parseInt(id)
   );
 
