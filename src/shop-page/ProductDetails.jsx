@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
 
@@ -13,6 +13,7 @@ import {
   FaPlus,
   FaShoppingCart,
 } from "react-icons/fa";
+import { CartContext } from "../shop-page/CartContext";
 
 import Header from "./Header";
 import Navbars from "./Navbar";
@@ -29,6 +30,7 @@ function ProductDetails() {
   );
 
   const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useContext(CartContext);
 
   if (!product) {
     return <div>Product not found</div>;
@@ -166,9 +168,13 @@ function ProductDetails() {
                 </button>
               </div>
 
-              <Button className="add-cart-btn">
-                Add To Cart
-                <FaShoppingCart className="ms-2" />
+             <Button
+              className="add-cart-btn"
+              onClick={() =>
+              addToCart(product, quantity)
+               }>
+               Add To Cart
+               <FaShoppingCart className="ms-2" />
               </Button>
 
               <button className="wishlist-btn">
