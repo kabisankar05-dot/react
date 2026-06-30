@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
@@ -9,11 +9,15 @@ import {
   FaStar,
 } from "react-icons/fa";
 
+import { CartContext } from "../shop-page/CartContext";
+
 function ProductCard({
   product,
   onQuickView,
 }) {
   const navigate = useNavigate();
+
+  const { addToCart } = useContext(CartContext);
 
   return (
     <Card
@@ -73,10 +77,14 @@ function ProductCard({
 
         <button
           className="cart-btn"
-          onClick={(e) => e.stopPropagation()}
+          onClick={(e) => {
+            e.stopPropagation();
+            addToCart(product, 1);
+          }}
         >
           <FaShoppingCart />
         </button>
+
       </Card.Body>
     </Card>
   );

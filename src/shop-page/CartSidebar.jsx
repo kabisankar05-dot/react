@@ -1,25 +1,13 @@
 import React, { useContext } from "react";
-import {
-  Offcanvas,
-  Button,
-} from "react-bootstrap";
-
+import { Offcanvas, Button } from "react-bootstrap";
 import { CartContext } from "../shop-page/CartContext";
+import "../shop-page/CartSiderbar.css";
 
-function CartSidebar({
-  show,
-  handleClose,
-}) {
-  const {
-    cartItems,
-    removeFromCart,
-  } = useContext(CartContext);
+function CartSidebar({ show, handleClose }) {
+  const { cartItems, removeFromCart } = useContext(CartContext);
 
   const total = cartItems.reduce(
-    (sum, item) =>
-      sum +
-      item.price *
-        item.quantity,
+    (sum, item) => sum + item.price * item.quantity,
     0
   );
 
@@ -32,83 +20,76 @@ function CartSidebar({
     >
       <Offcanvas.Header closeButton>
         <Offcanvas.Title>
-          Shopping Cart (
-          {cartItems.length})
+          Shopping Cart ({cartItems.length})
         </Offcanvas.Title>
       </Offcanvas.Header>
 
-      <Offcanvas.Body className="d-flex flex-column">
-        <div className="flex-grow-1">
+      <Offcanvas.Body className="cart-body">
+
+        <div className="cart-items">
 
           {cartItems.length === 0 ? (
-            <p className="text-center">
+            <div className="empty-cart">
               Cart is Empty
-            </p>
+            </div>
           ) : (
             cartItems.map((item) => (
-              <div
-                key={item.id}
-                className="cart-item"
-              >
+              <div className="cart-item" key={item.id}>
+
                 <img
                   src={item.image}
                   alt={item.name}
-                  width="90"
-                  height="60"
+                  className="cart-image"
                 />
 
                 <div className="cart-info">
-                  <h6>
-                    {item.name}
-                  </h6>
 
-                  <small>
-                 {item.quantity}kg x
-                  <strong> ${item.price}</strong>
-                </small>
+                  <h6>{item.name}</h6>
+
+                  <span>
+                    {item.quantity} kg x
+                    <strong> ${item.price}</strong>
+                  </span>
+
                 </div>
 
                 <button
                   className="remove-btn"
-                  onClick={() =>
-                    removeFromCart(
-                      item.id
-                    )
-                  }
+                  onClick={() => removeFromCart(item.id)}
                 >
                   ×
                 </button>
+
               </div>
             ))
           )}
+
         </div>
 
         <div className="cart-footer">
-          <div className="d-flex justify-content-between mb-3">
+
+          <div className="cart-total">
+
             <span>
-              {cartItems.length}
-              {" "}Products
+              {cartItems.length} Product
             </span>
 
             <strong>
-              $
-              {total.toFixed(
-                2
-              )}
+              ${total.toFixed(2)}
             </strong>
+
           </div>
 
-          <Button className="checkout-btn w-100 mb-2">
+          <Button className="checkout-btn">
             Checkout
           </Button>
 
-          <Button
-            variant="light"
-            className="w-100"
-          >
+          <Button className="goto-cart-btn">
             Go To Cart
           </Button>
+
         </div>
+
       </Offcanvas.Body>
     </Offcanvas>
   );
